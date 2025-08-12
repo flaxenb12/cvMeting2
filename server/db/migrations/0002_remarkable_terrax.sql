@@ -1,0 +1,1 @@
+ALTER TABLE "posts" ALTER COLUMN "info" DROP NOT NULL;
