@@ -5,7 +5,7 @@
       This is a simple Nuxt 3 application with Drizzle ORM and PostgreSQL.
     </p>
     <p class="mb-4">You can manage your posts below:</p>
-    <nuxt-link to="/posts" class="text-blue-500 hover:underline"
+    <nuxt-link to="/dashboard" class="text-blue-500 hover:underline"
       >Go to Posts</nuxt-link
     >
     <div class="mt-8">

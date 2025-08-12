@@ -1,5 +1,6 @@
 export default defineNuxtRouteMiddleware(async (to) => {
   const isUserNavigatingToTheApp = to.path.startsWith("/app");
+
   if (!isUserNavigatingToTheApp) {
     return;
   }
