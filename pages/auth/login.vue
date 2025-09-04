@@ -83,6 +83,7 @@ async function createUser() {
   );
   loading.value = false;
 }
+
 async function sigUp() {
   const { data, error } = await useAuthClient().signUp.email(
     {

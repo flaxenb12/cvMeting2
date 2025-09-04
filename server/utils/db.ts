@@ -17,7 +17,7 @@ export function useDb(): NodePgDatabase {
     }
     global._pgPool = new Pool({
       connectionString: process.env.DATABASE_URL,
-      // tune as needed; keep total across instances under your Postgres limit
+      // tune as needed; keep total across instances under your Postgres limit, standard 10
       max: 100,
       idleTimeoutMillis: 30_000,
       connectionTimeoutMillis: 5_000,

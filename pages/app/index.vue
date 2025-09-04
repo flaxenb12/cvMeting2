@@ -8,11 +8,14 @@
 </template>
 
 <script setup>
+import { router } from "better-auth/api";
+
 const user = await useAuthUser();
 const { signOut } = useAuthClient();
 const accounts = await useAuthClient().listAccounts();
 async function logout() {
-  await signOut({ redirect: "/auth/login" });
+  await signOut();
+  useRouter().push("/auth/login");
 }
 </script>
 

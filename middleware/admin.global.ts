@@ -1,13 +1,13 @@
 export default defineNuxtRouteMiddleware(async (to) => {
-  const isUserNavigatingToTheApp = to.path.startsWith("/dashboard");
+  const isUserNavigatingToTheDashboard = to.path.startsWith("/dashboard");
 
-  if (!isUserNavigatingToTheApp) {
+  if (!isUserNavigatingToTheDashboard) {
     return;
   }
 
   const { user } = await useAuthUser();
 
-  if (user.role !== "admin") {
+  if (user?.role !== "admin") {
     return navigateTo("/auth/login");
   }
 });
